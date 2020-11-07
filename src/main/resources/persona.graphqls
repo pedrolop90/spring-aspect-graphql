@@ -1,0 +1,20 @@
+type Persona {
+    id: ID!
+    nombre: String!
+    cedula: String
+}
+
+input PersonaInput {
+    id: ID
+    nombre: String!
+    cedula: String!
+}
+
+
+type Query {
+    personas: [Persona]!
+}
+
+type Mutation {
+    createPersona(persona: PersonaInput!) : Persona!
+}
